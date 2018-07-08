@@ -6,7 +6,9 @@ body, html {
     height: 100%;
     opacity: 1;  
 }
-
+#siteNav {
+    transition: all 1s ease-out;
+}
 #bgOverlay{
     height: 100%;
     background-color: transparent;
