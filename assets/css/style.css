@@ -1,14 +1,32 @@
-
+*{
+    box-sizing: border-box;
+}
 body, html {
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .bg{
     height: 100%;
-    opacity: 1;  
+    opacity: 1; 
+    
+    /*background-image: url('../images/events/basant.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+#bgOverlay{
+    
+    height: 100%;
 }
 #siteNav {
+    background: transparent;
     transition: all 1s ease-out;
 }
+/*#siteNav.fade-in {
+    opacity: 1;
+    background: #efcc31;
+    transition: all 1s ease-out;
+}*/
 #bgOverlay{
     height: 100%;
     background-color: transparent;
@@ -38,8 +56,8 @@ body, html {
     align-content: center;
 }
 #intro {
-    position: absolute;
     color:rgba(255, 255, 255, 0.678);
+    padding: 15px;
     height: auto; 
     border: 0px;
     opacity: 0;
@@ -52,12 +70,12 @@ body, html {
     transform: translateY(0);
 }
 #slogan{
-    position: relative;
-    top: 200px;
-    color: #fded00;
-    color:#444;
+    color: #efcc31;
+    padding: 15px;
+    background-color: #00000081;
     font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 2px 0px 10px #efcc31;
 }
 a {
     color:#fded00;
@@ -71,25 +89,28 @@ a {
     height: 5px;
     background: rgba(255, 255, 255, 0.267);
 }
-.angleTop {
-    background-image: url('..images/angleDiv.png');
-    position: absolute;
-    bottom: 300px;
-    height: 30px;
-    width: 100%;
-
-}
-#aboutUs{
+#aboutUs {
     background: transparent;
-    height: 600px;;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s  ease-out;
 }
-#aboutUsImg {
-    background: #ac1d07;
+#aboutUs.fade-in {
+    background: transparent;
+    opacity: 1;
+    transform: translateY(0);
 }
-#aboutUsContent {
-    background: #efcc31;
-    height: auto;
-    box-shadow: 2px 0px 10px #efcc31;
+#aboutUs.fade-in>div>h1 {
+    font-family: 'Work Sans', sans-serif;
+    background: transparent;
+    font-size: 72px;
+    color: #efcc31;
+    margin-bottom: 0;
+    width: 50%;
+    position: relative;
+    bottom: -16px;
+    left: 10px;
+    text-shadow: 2px 0px 10px #ac1d07;
 }
 #aboutUsHeader {
     color:#ac1d07;
@@ -97,12 +118,25 @@ a {
     font-family: 'Montserrat', sans-serif;
 
 }
-p {
+#aboutUsContent {
+    background: #efcc31;
+    box-shadow: 2px 0px 10px #efcc31;
+
+
+}
+#aboutUsP {
     color:#444;
     font-family: 'Marvel', sans-serif;
     font-size:20px;
     padding: 15px;
 }
+
+#fbFeed>h1 {
+    background: #ac1d07;
+    color:#efcc31;
+    font-family: 'Montserrat', sans-serif;
+}
+
 #fb>h2 {
     color: #efcc31;
     background: #00000081;
@@ -111,30 +145,90 @@ p {
     padding: 15px;
 
 }
+#loyalty {
+    background: #efcc317d;
+    padding: 30px;
+    background: #00000081;
+}
+#loyalty h1 {
+    font-family:'Poriet One',serif;
+    color:#efcc31;
+    background: #00000081;
+}
+
+#loyalty form {
+    width: 100%;
+    
+}
+#loyalty input {
+    border-radius: 0;
+    border-color: #efcc31;
+    background: black;
+    width: 50%;
+    margin: 0 auto;
+    background: #00000081;
+}
+#loyalty input:focus {
+    border-radius: 0;
+    background: whitesmoke;
+}
+#loyalty button {
+    border-radius: 0;
+    background-color:#ac1d07;
+    width: 100px;
+    margin: 5px;
+    color: white;
+    transition: all .5s ease-out;
+}
+#loyalty button:hover {
+    background-color:#efcc31;
+    box-shadow: 0px 0px 10px #efcc31;
+    color:black;
+}
 #menu {
-    background-image: url('../images/entrees/menu.png');
+    background: transparent;
+    color:#efcc31;
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s  ease-out;
+
+    /*height: 100px;*/
+}
+
+#menu.fade-in {
+    background-image: url('../images/blackbg.png');
     background-size:100% 100%;
-    background-position:center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     color:#efcc31;
     font-size: 48px;
     font-family: 'Montserrat', sans-serif;
+    opacity: 1;
+    transform: translateY(0);
+
     /*height: 100px;*/
 }
 #menuHeader {
     background: #ac1d07;
     box-shadow: 2px 0px 10px #00000081;
 }
-.menuContent {
+#menuContent {
     background: #efcc31;
     
+}
+.menuContent p {
+    font-family: 'Marvel', sans-serif;
+    background: #efcc31;
+    color:#444;
+    font-size: 20px;
+    padding:15px;
 }
 .menuItems {
     background: #efcc31;
     color: #ac1d07;
     font-weight: bolder;
-    
-
 }
 .chkItems {
 
@@ -210,19 +304,39 @@ video {
     width:100%;
     height: auto;
 }
-iframe {
+#fbFeed{
+    background:#ac1d07;
     box-shadow: 2px 0px 10px #efcc31;
-    height: 168px;
-    width: 300px;
+}
+.fbFeed>h1{
+    background: #ac1d07;
+    color:#efcc31;
+}
+.fbFeed{
+
+    background:#ac1d07;
+    height: auto;
+    width: 350px;
     display: block;
     padding:5px;
     margin: 0 auto;
 }
-#contactUs {
+footer {
     background:#ac1d07;
+}
+#contactUs p {
+    font-size: 20px;
+    font-family: 'Marvel', sans-serif;
     color:black;
 }
-
+#contactUs img {
+    width: 30%;
+    height: auto;;
+}
+#contactUs i {
+    width: 100px;
+    height: auto;
+}
 navBar.navbar-toggle {
     background: transparent;
     border: 0px;
@@ -267,11 +381,30 @@ a.navbar-brand:visited {
 }
 /*MQs*/
 @media (max-width: 767px) {
+    #aboutUs.fade-in>div>h1 {
+        font-family: 'Work Sans', sans-serif;
+        background: transparent;
+        font-size: 72px;
+        color: #efcc31;
+        margin-bottom: 0;
+        width: 50%;
+        position: relative;
+        bottom: -36px;
+        left: 10px;
+        text-shadow: 2px 0px 10px #ac1d07;
+    }
+    #fbFeed{
+        margin: 0;
+        clear: right;
+    }
     .quickLinks{
         display: none;
     }
     #slogan {
         font-size: 20px;
+        background: #00000081;
+        color:#efcc31;
+        box-shadow: #ac1d07;
     }
     #intro {
         width:90%;

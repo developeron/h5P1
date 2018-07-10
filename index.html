@@ -12,7 +12,7 @@
         <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--GoogleFonts-->
-    <link href="https://fonts.googleapis.com/css?family=Stoke|Poiret+One|Montserrat|Marvel|Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stoke|Poiret+One|Montserrat|Marvel|Work+Sans:900" rel="stylesheet">
     <!--IconAPI-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Custom CSS -->
@@ -21,10 +21,9 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 <!--Header-->
     <div class="bg">
-        <div class="hr"></div>
         <div id="bgOverlay">
             <div class="container-fluid" id="Home">
-                <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
+                <nav id="nav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNav">
                             <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -39,44 +38,37 @@
                         <li><a href="#eventVideo">Events</a></li>
                         <li><a href="https://www.grubhub.com/restaurant/halal5-10714-w-bellfort-st-houston/401673" target="blank">Order Online</a></li>
                         </ul>
-                        <i class="fab fa-facebook-f"></i>
                     </div>
                 </nav>
             </div>
             <div class="intro" class="container-fluid text-center">
             <div class="row">
                 <div id="intro"class="col-12">
-                    <img class="img-responsive"src="assets/images/logo.png"> 
-                </div>
-                <div class="col-12">
-                    <h3 id="slogan" class="text-center">Fresh.Fast.Healthy</h3>
-                </div>
+                    <img class="img-responsive"src="assets/images/logo.png">
+                    <h3 id="slogan" class="text-center">Fresh.Fast.Healthy</h3> 
                 </div>
             </div>
             </div>
         </div>
     </div>
-
-<!--Main Content-->
- 
+    <!--main-->
     <div id="aboutUs"class="container-fluid">
-        <div  class="row">
-            <div id="aboutUsContent"class="col-lg-8 col-md-8 col-sm-12">
+        <div class="row">
+            <h1>HALAL5</h1>
+            <div id="aboutUsContent"class="col-lg-6 col-md-6 col-sm-12">
                 <h1 id="aboutUsHeader">It's what's on the inside <br>that counts!
                 </h1>
                 <p id="aboutUsP"class="text-left">Our goal has always been to delight our customers with unparalleled hospitality and mouthwatering food at unbeatable prices. Our vision is to become the dominant and best American Halal Food restaurant in the world. 
                     Simply put, our success rests upon our dedication to our customers. Our customers are from every walk of life, and it gives us great pride to see such diversity reflected in our long lines. We firmly believe in treating every person who comes to us with appreciation, honor, dignity, and respect. We teach this concept to everyone who comes to work at Halal 5.
                     To us, customer service goes beyond our restaurants, it is who we are and this principle is ingrained in all our partners.
                 </p>
-                <quote></quote>
             </div>
-                <!--<div id="fb" class="col-lg-4 col-md-4 col-sm-12"> 
-                    <h2 id="fbFeed" class="text-center">Connect With Us!</h2>
-                    <div  class"embed-responsive embed-responsive-4by3">
-                        <iframesrc="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" style="width:340px;height:500px;border:none;overflow:hidden" scrolling="no" frameborder="1" allowTransparency="true" allow="encrypted-media"></iframe>
-                    </div>
-                 </div>-->
+        <div id="fbFeed"class="col-lg-6 col-md-6 col-sm-12">
+            <div class="fbFeed">
+                <h1 class="text-center">Get Social</h1>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2F10714westbellfort%2Fphotos%2F%3Fref%3Dpage_internal&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
+        </div>
         </div>
     </div>
     <div id="menu" class="col-lg-12 col-md-12 col-sm-12 text-center container-fluid">
@@ -86,7 +78,7 @@
             </div>
         </div>
     <div class="container">
-        <div class="row menuContent">
+        <div id="menuContent" class="row menuContent">
             <div class="col-md-12">
                 <p>
                     We at Halal 5 are the pioneers of American Halal Food. American Halal Food features a flavor profile that can’t be replicated in any other cuisine format, featuring flawlessly cooked, premium quality Halal meats that are seasoned to perfection and a melting pot of Middle Eastern and Mediterranean flavors that are sure to delight.
@@ -195,7 +187,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
-                <h3><button id="caterButton">  Cater with Us!  </button><br><small>Make your event special with our catering!</h3>
+                <h3><button id="caterButton"> Cater with Us! </button><br><small>Make your event special with our catering!</h3>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
             </div>
@@ -205,6 +197,7 @@
         </div>            
     </div>
     </div>
+    <!--Events-->
     <div id="events" class="container-fluid">
         <div class="row eventsHeader">
             <div class="col-md-12 text-center" style="background:black;">
@@ -215,6 +208,8 @@
             </div>
             <div id="pastEvents" class="col-lg-6 col-md-6 col-sm-12 text-center" style="background:black;">
                 <h3 class="eventsHeader">Past Events</h3>
+                <h3 id="2018">2018</h3>
+                <hr>
                 <div>
                     <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F413202122504946%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
                     <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F409538989537926%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
@@ -224,9 +219,9 @@
             </div>
             <div id="upcomingEvents"class="col-lg-6 col-md-6 col-sm-12 text-center"style="background:black;">
                 <h3 class="eventsHeader">Upcoming Events</h3>
-                <!--<div class="eventsMonth">
+                <div class="eventsMonth">
                     <h3 id="july">July</h3>
-                    <hr>-->
+                    <hr>
                     <div>
                         <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F413202122504946%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
                         <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F409538989537926%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
@@ -237,16 +232,51 @@
             </div>
         </div>
     </div>
-    <div id="contactUs"class="container-fluid">
+    <div id="loyalty" class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <img class="img-responsive" src="assets/images/logo.png">
-                <code>Copyright © Halal5.com</code>
+            <div class="col-sm-12">
+                <h1>Join Our Loyalty Program<br><small>Get 5% back on all your purchases when you sign up!</small></h1>
+            </div>
+            <div class="col-sm-12">
+                    <form class="text-center">
+                        <input class="form-control" id="search" type="text" placeholder="Enter your email">
+                        <button class="btn" id="submit" type="submit">Subscribe</button>
+                    </form>
             </div>
         </div>
     </div>
+
+    <footer class="container-fluid">
+        <div id="contactUs">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <img class="img-responsive" src="assets/images/logo.png">
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h3>Contact Us!</h3>
+                    <p>
+                        10714 West Bellfort St.<br>
+                        Houston, Texas 77099
+                    </p>
+                    <a id="fbLogo" href="https://www.facebook.com/10714westbellfort/"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h3>Franchise Info.</h3>
+                    <button id="caterButton"> Become a Franchisee </button><br><small>Remarkable Business Opportunity.</h3>
+                </div>
+            </div>
+        </div>
+    </footer>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <script src="assets/javascripts/main.js"></script>
+    <script>
+    $(function () {
+        $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+    </script>
 </body>
 </html>
