@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Halal5 | Fresh-Fast-Healthy</title>
+    <title>Halal5 | Fresh.Fast.Healthy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 3.3.7-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,47 +12,54 @@
         <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--GoogleFonts-->
-    <link href="https://fonts.googleapis.com/css?family=Stoke|Poiret+One|Montserrat|Marvel|Work+Sans:900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stoke|Poiret+One|Montserrat|Marvel|Work+Sans:900|Six Caps" rel="stylesheet">
     <!--IconAPI-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target="#nav" data-offset="50">
 <!--Header-->
     <div class="bg">
-        <div id="bgOverlay">
-            <div class="container-fluid" id="Home">
-                <nav id="nav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNav">
-                            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                        </button>
-                        <!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a>--> 
-                    </div>
-                    <div id="siteNav" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#Home">Home</a></li>
-                        <li><a href="#aboutUs">About</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#eventVideo">Events</a></li>
-                        <li><a href="https://www.grubhub.com/restaurant/halal5-10714-w-bellfort-st-houston/401673" target="blank">Order Online</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="intro" class="container-fluid text-center">
+        <div class="container-fluid" id="Home">
+            <nav id="nav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNav">
+                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a>--> 
+                </div>
+                <div id="siteNav" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#Home">Home</a></li>
+                    <li><a href="#aboutUs">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="https://www.grubhub.com/restaurant/halal5-10714-w-bellfort-st-houston/401673" target="blank">Order Online</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="intro" class="container-fluid">
             <div class="row">
-                <div id="intro"class="col-12">
+                <div id="intro"class="col-lg-12 col-md-12">
                     <img class="img-responsive"src="assets/images/logo.png">
-                    <h3 id="slogan" class="text-center">Fresh.Fast.Healthy</h3> 
                 </div>
             </div>
+            <div id="slogan" class="container">
+                <h3 class="text-center">Fresh.Fast.Healthy</h3>
+                <h1 class="text-center">Make your event special with our catering!</h1>
+                <div class="row text-center">
+                    <a id="cateringBtn"class="text-center" href="#catering">Order Catering</a>
+                    <a id="cateringBtn"class="text-center" href="#menu">Our Menu</a>
+                </div>
             </div>
         </div>
     </div>
-    <!--main-->
-    <div id="aboutUs"class="container-fluid">
+<!--main-->
+<main>
+    <!--aboutUs-->
+    <div id="aboutUs"class="container">
         <div class="row">
             <h1>HALAL5</h1>
             <div id="aboutUsContent"class="col-lg-6 col-md-6 col-sm-12">
@@ -63,29 +70,36 @@
                     To us, customer service goes beyond our restaurants, it is who we are and this principle is ingrained in all our partners.
                 </p>
             </div>
-        <div id="fbFeed"class="col-lg-6 col-md-6 col-sm-12">
+            <div id="fbFeed"class="col-lg- 5 col-md-5 col-sm-5">
             <div class="fbFeed">
-                <h1 class="text-center">Get Social</h1>
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2F10714westbellfort%2Fphotos%2F%3Fref%3Dpage_internal&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <h1 id="fbFeedHeader" class="text-left">Follow Us!</h1>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2F&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="400" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
             </div>
         </div>
-        </div>
     </div>
+
+    <!--Menu-->
     <div id="menu" class="col-lg-12 col-md-12 col-sm-12 text-center container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1 id="menuHeader" class="container">Our Menu</h1>
+                <h1 id="menuHeader" class="container-fluid">Our Menu</h1>
             </div>
         </div>
-    <div class="container">
+    <div class="container-fluid">
         <div id="menuContent" class="row menuContent">
-            <div class="col-md-12">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
                 <p>
                     We at Halal 5 are the pioneers of American Halal Food. American Halal Food features a flavor profile that can’t be replicated in any other cuisine format, featuring flawlessly cooked, premium quality Halal meats that are seasoned to perfection and a melting pot of Middle Eastern and Mediterranean flavors that are sure to delight.
                 </p>
-               <div class="menu hr"></div> 
             </div>
+            <div class="col-md-3">
+            </div>
+        <div class="menu hr"></div> 
         </div>
+
         <div class="row menuItems">  
             <div class="col-lg-12 category text-center">
                 <h3>
@@ -193,59 +207,26 @@
             </div>
             
         </div>
-        <div class="row eventStart">
-        </div>            
+           
     </div>
     </div>
-    <!--Events-->
-    <div id="events" class="container-fluid">
-        <div class="row eventsHeader">
-            <div class="col-md-12 text-center" style="background:black;">
-                <h1>Events</h1>
-                <video autoplay muted loop id="eventVideo">
-                    <source src="assets/images/events/events.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div id="pastEvents" class="col-lg-6 col-md-6 col-sm-12 text-center" style="background:black;">
-                <h3 class="eventsHeader">Past Events</h3>
-                <h3 id="2018">2018</h3>
-                <hr>
-                <div>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F413202122504946%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F409538989537926%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F401622840329541%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F396657997492692%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                </div>
-            </div>
-            <div id="upcomingEvents"class="col-lg-6 col-md-6 col-sm-12 text-center"style="background:black;">
-                <h3 class="eventsHeader">Upcoming Events</h3>
-                <div class="eventsMonth">
-                    <h3 id="july">July</h3>
-                    <hr>
-                    <div>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F413202122504946%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F409538989537926%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F401622840329541%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F396657997492692%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--Loyalty-->
     <div id="loyalty" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1>Join Our Loyalty Program<br><small>Get 5% back on all your purchases when you sign up!</small></h1>
-            </div>
-            <div class="col-sm-12">
-                    <form class="text-center">
-                        <input class="form-control" id="search" type="text" placeholder="Enter your email">
-                        <button class="btn" id="submit" type="submit">Subscribe</button>
-                    </form>
-            </div>
+    <div  class="row">
+        <div class="col-sm-12">
+            <h1>Join Our Loyalty Program<br><small>Get 5% back on all your purchases when you sign up!</small></h1>
+        </div>
+        <div class="col-sm-12">
+                <form class="text-center">
+                    <input class="form-control" id="search" type="text" placeholder="Enter your email">
+                    <button class="btn" id="submit" type="submit">Subscribe</button>
+                </form>
         </div>
     </div>
-
+    </div>
+</main>
+<!--Footer-->
+    <!--ContactUs-->
     <footer class="container-fluid">
         <div id="contactUs">
             <div class="row">
@@ -262,21 +243,15 @@
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <h3>Franchise Info.</h3>
-                    <button id="caterButton"> Become a Franchisee </button><br><small>Remarkable Business Opportunity.</h3>
+                    <button id="caterButton">Become a Franchisee </button><br><small>Remarkable Business Opportunity.</h3>
                 </div>
             </div>
         </div>
-    </footer>   
+    </footer>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <script src="assets/javascripts/main.js"></script>
-    <script>
-    $(function () {
-        $(document).scroll(function () {
-        var $nav = $(".navbar-fixed-top");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-        });
-    });
-    </script>
 </body>
 </html>
