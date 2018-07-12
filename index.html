@@ -5,29 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Halal5 | Fresh.Fast.Healthy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Bootstrap 3.3.7-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--GoogleFonts-->
     <link href="https://fonts.googleapis.com/css?family=Stoke|Poiret+One|Montserrat|Marvel|Work+Sans:900|Six Caps" rel="stylesheet">
     <!--IconAPI-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascripts/main.js"></script>
 </head>
-<body data-spy="scroll" data-target="#nav" data-offset="50">
+<body>
 <!--Header-->
     <div class="bg">
         <div class="container-fluid" id="Home">
-            <nav id="nav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
+            <nav id="nav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="200">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNav">
                         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a>--> 
+                    
                 </div>
                 <div id="siteNav" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -46,15 +49,51 @@
                     <img class="img-responsive"src="assets/images/logo.png">
                 </div>
             </div>
+            <div id="sloganBanner">
+            </div>
             <div id="slogan" class="container">
-                <h3 class="text-center">Fresh.Fast.Healthy</h3>
+                <h3 class="text-center">Fresh<span class="dot">.</span>Fast<span class="dot">.</span>Healthy</h3>
                 <h1 class="text-center">Make your event special with our catering!</h1>
                 <div class="row text-center">
-                    <a id="cateringBtn"class="text-center" href="#catering">Order Catering</a>
-                    <a id="cateringBtn"class="text-center" href="#menu">Our Menu</a>
+                    <a class="text-center cateringBtn">Order Catering</a>
                 </div>
             </div>
+            </div>
         </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+    </div>
+  </div> 
     </div>
 <!--main-->
 <main>
@@ -73,7 +112,7 @@
             <div id="fbFeed"class="col-lg- 5 col-md-5 col-sm-5">
             <div class="fbFeed">
                 <h1 id="fbFeedHeader" class="text-left">Follow Us!</h1>
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2F&tabs=timeline&width=400&height=600&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="400" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2F&tabs=timeline&width=250&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
             </div>
         </div>
@@ -183,25 +222,25 @@
         </div>
         <div class="row sideItems">
             <div class="col-lg-6 col-md-6 col-sm-12 text-left">
-                <h4 class="col-sm-9">Fries<br><small>Freshly cut potatoes fried to golden crisp.</small></h4>
+                <h4 class="col-sm-9">Fries<br></h4>
                 <h4 class="col-sm-3">$1.50</h4>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 text-left">
-                    <h4 class="col-sm-9">Soda<br><small>Coke.Sprite.Fanta.Pepsi Can.</small></h4>
+                    <h4 class="col-sm-9">Soda<br></h4>
                     <h4 class="col-sm-3">$1.50</h4>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 text-left">
-                <h4 class="col-sm-9">Bottled Water<br><small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, dicta minus quam accusantium nam illum perspiciatis reiciendis. Sint voluptas laborum saepe fugiat aspernatur amet eius ea vero cupiditate, eveniet perspiciatis!</small></h4>
+                <h4 class="col-sm-9">Bottled Water<br></h4>
                 <h4 class="col-sm-3">$1.00</h4>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 text-left">
-                    <h4 class="col-sm-9">Chai<br><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi eveniet nisi iure nulla perspiciatis, debitis ullam nesciunt asperiores. Harum consectetur pariatur est error possimus repellat fugiat esse quidem dolores.</small></h4>
+                    <h4 class="col-sm-9">Chai<br></h4>
                     <h4 class="col-sm-3">$1.00</h4>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
-                <h3><button id="caterButton"> Cater with Us! </button><br><small>Make your event special with our catering!</h3>
+                <br><h3><a class="text-center cateringBtn">Cater With Us!</a><br><br><small>Make your event special with our catering!</h3>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
             </div>
@@ -213,14 +252,12 @@
     <!--Loyalty-->
     <div id="loyalty" class="container-fluid">
     <div  class="row">
-        <div class="col-sm-12">
-            <h1>Join Our Loyalty Program<br><small>Get 5% back on all your purchases when you sign up!</small></h1>
-        </div>
-        <div class="col-sm-12">
-                <form class="text-center">
-                    <input class="form-control" id="search" type="text" placeholder="Enter your email">
-                    <button class="btn" id="submit" type="submit">Subscribe</button>
-                </form>
+        <div class="col-sm-12 text-center">
+            <h1>Join Our Loyalty Program<br><small>Get special offers when you sign up!</small></h1>
+            <form>
+                <input class="form-control" id="search" type="text" placeholder="Enter your email">
+                <button class="btn" id="submit" type="submit">Subscribe</button>
+            </form>
         </div>
     </div>
     </div>
@@ -231,7 +268,7 @@
         <div id="contactUs">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-                    <img class="img-responsive" src="assets/images/logo.png">
+                    <a href="index.html"><img src="assets/images/logo2.png"></a> 
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <h3>Contact Us!</h3>
@@ -240,18 +277,11 @@
                         Houston, Texas 77099
                     </p>
                     <a id="fbLogo" href="https://www.facebook.com/10714westbellfort/"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <h3>Franchise Info.</h3>
-                    <button id="caterButton">Become a Franchisee </button><br><small>Remarkable Business Opportunity.</h3>
+
                 </div>
             </div>
         </div>
     </footer>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <script src="assets/javascripts/main.js"></script>
+
 </body>
 </html>
