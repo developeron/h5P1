@@ -1,33 +1,32 @@
 *{
     box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+    width: 5px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #efcc31;
+}
 body, html {
     height: 100%;
     overflow-x: hidden;
 }
 .bg{
     height: 100%;
+    width:auto;
     opacity: 1; 
-    /*background-image: url('../images/events/basant.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 #bgOverlay{
     
     height: 100%;
 }
 #siteNav {
-    background: transparent;
-    transition: all 1s ease-out;
-    margin-right:10px;
-}
-#siteNav.scrolled {
-    opacity: 1;
-    background: #efcc31b8;
-    transition: all 1s ease-out;
-    padding:0;
-    box-shadow: 2px 0px 10px #00000092;
-    margin-right:10px;
+    /* background: transparent; */
+    margin-right:1px;
 }
 
 #bgOverlay{
@@ -75,29 +74,54 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     box-shadow: 2px 0px 10px #efcc31;
     margin: 0 auto;
+    position: relative;
+    right:0;
 }
-#cateringBtn{
+.dot {
+    color:#ac1d07;
+    font-weight: bolder;
+    font-size: 48px;
+}
+#sloganBanner{
+    height: 40vh;
+}
+.cateringBtn{
     border-radius: 0;
     border:0;
     background-color: #ac1d07;
-    color: white;
+    color: #efcc31;
     transition: all .5s ease-out;
     cursor: pointer;
     padding: 7px;
+    box-shadow: 2px 0px 10px #ac1d07;
 }
-#cateringBtn:hover{
+.cateringBtn:hover{
     border-radius: 0;
     border:0;
     background-color: #efcc31;
     text-decoration: none;
-    color: black;
+    color: #ac1d07;
     transition: all .5s ease-out;
     cursor: pointer;
     box-shadow: 2px 0px 10px #efcc31;
 }
+.modal-header, .close {
+    background-color: #efcc31;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+}
+.modal-footer {
+    background-color: #ac1d07;
+}
 a {
     color:#fded00;
     background-color: transparent;
+}
+a>i {
+    color:#fded00;
+    background-color: transparent;
+    font-size:2.5em;
 }
 .hr {
     height: 5px;
@@ -154,11 +178,11 @@ a {
     font-size: 48px;
     font-family: 'Montserrat', sans-serif;
     color: #efcc31;
-    width: 400px;
+    width: auto;
 }
 
 #fbFeed {
-    width:auto;
+    width:300px;
 }
 #loyalty div {
     background: linear-gradient(to bottom, transparent, black);
@@ -168,22 +192,23 @@ a {
     color:#efcc31;
     background: #000000;
     height: 100%;
+    font-family: 'Montserrat', 'san-serifs';
 }
 
 #loyalty form {
     width: 100%;
-    
+    margin-top:0;
 }
 #loyalty input {
     border-radius: 0;
     border-color: #efcc31;
-    width: 75%;
+    max-width: 60%;
     margin: 0 auto;
-    background: #00000081;
+    background: #00000084;
 }
 #loyalty input:focus {
     border-radius: 0;
-    background: #efcc31ac;
+    background: whitesmoke;
 }
 #loyalty button {
     border-radius: 0;
@@ -340,9 +365,12 @@ video {
 }
 footer {
     background:#ac1d07;
+    color:#efcc31;
+    font-family: 'Montserrat', sans-serif;
 }
 #contactUs p {
     font-size: 20px;
+    font-weight: 600;
     font-family: 'Marvel', sans-serif;
     color:black;
 }
@@ -356,17 +384,23 @@ footer {
 }
 .navbar-default .navbar-nav>li>a{
     margin-right:10px;
-    color:#ac1d07;
+    color:#fded00;
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
+    
 }
 .navbar-default .navbar-nav>li>a:hover{
     margin-right:10px;
     color:#fded00;
-    background:#ac1d07;  
+    background:#ac1d07;
+    font-weight: 700;  
 }
 .navbar-right {
     margin: 0;
+    background: #ac1d07b1;
+    /*position: absolute;
+    right:0;
+    top: 0;*/
 }
 .active>a{
     box-shadow: 2px 0px 10px #0000003e;
@@ -414,14 +448,16 @@ a.navbar-brand:visited {
 
 }
 /*MQs*/
-@media (max-width: 767px) {
-    .navbar-header.scrolled {
-        opacity: 1;
-        background: #efcc31b8;
+@media (max-width: 1300px) {
+    #intro>img {
+        margin: 50px auto;
         transition: all 1s ease-out;
-        padding:0;
-        box-shadow: 2px 0px 10px #00000092;
     }
+    #sloganBanner{
+        height: 20vh;
+    }
+}
+@media (max-width: 767px) {    
     #slogan>h3{
         color: #efcc31;
         font-weight: bolder;
@@ -440,12 +476,19 @@ a.navbar-brand:visited {
         left: 10px;
         text-shadow: 2px 0px 10px #ac1d07;
     }
+    #fbFeed {
+        width:300px;
+        margin: 50px auto;
+    }
     #fbFeed{
     background:#ac1d07;
     box-shadow: 2px 0px 10px #ac1d07;
     }
     .quickLinks{
         display: none;
+    }
+    #sloganBanner{
+        height: 15vh;
     }
     #slogan {
         font-size: 20px;
@@ -454,7 +497,12 @@ a.navbar-brand:visited {
         box-shadow: #ac1d07;
     }
     #intro {
-        width:90%;
+        width:70%;
+        margin: 0 auto;
+    }
+    #intro>img {
+        margin: 0 auto;
+        transition: all 1s ease-out;
     }
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         border-color: transparent;
@@ -466,6 +514,7 @@ a.navbar-brand:visited {
     }
     .navbar-default .navbar-toggle .icon-bar {
         background-color: #ac1d07;
+
     }
     .navbar,.navbar-header {
         background:transparent;
