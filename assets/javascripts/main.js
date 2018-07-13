@@ -1,10 +1,7 @@
 $(document).ready(function(){
-//navbar on scroll
-$(window).scroll(function(){
-    if ($(document).scrollTop() > 50){
-        $('#slogan').css('opacity','0')
-    };
-})
+    $(".cateringBtn").click(function(){
+        $("#myModal").modal();
+    });
     //backstretch.js
     $.backstretch('assets/images/events/basant.jpg');
     //scrollMagic.js
