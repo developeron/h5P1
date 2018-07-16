@@ -73,7 +73,7 @@ body, html {
     height: auto; 
     border: 0px;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(0px);
     transition: all 1s  ease-out;
 
 }
@@ -502,6 +502,9 @@ footer {
 #successMsg {
     color: white;
 }
+.locations {
+    cursor: pointer;
+}
 .navbar-default .navbar-nav>li>a{
     margin-right:10px;
     color:#fded00;
@@ -675,6 +678,35 @@ a.navbar-brand:visited {
         max-width: 85%;
         margin: 0 auto;
         background: #00000084;
+    }
+    #eventsHeader>h1 {
+        background: transparent;
+        color: #efcc31;
+        height: 100%;
+        font-weight: 900;
+        font-size: 72px;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 2px 0px 10px black;
+        text-align: center;
+    
+    }
+    #eventsHeader {
+        background: linear-gradient(to bottom, transparent, black);
+        color:#efcc31;
+        height: 100%;
+        font-weight: 900;
+        font-size: 72px;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 2px 0px 10px black;
+    
+    }
+    h3.eventsHeader {
+        background: linear-gradient(to bottom, transparent, black);
+        color:#ac1d07;
+        height: 100%;
+        font-weight: 900;
+        font-size: 36px;
+        font-family: 'Montserrat', sans-serif;
     }
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         border-color: transparent;
