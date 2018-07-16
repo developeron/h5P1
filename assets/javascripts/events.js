@@ -39,43 +39,7 @@ $(document).ready(function(){
     });
 
     //backstretch.js
-    $.backstretch('assets/images/events/basant.jpg');
-
-    //scrollMagic.js
-
-    //$(window).on("resize", function(e) {
-        if ($(window).width() > 768) {
-            let controller = new ScrollMagic.Controller();
-    
-            let logo = new ScrollMagic.Scene({
-                triggerElement: '#intro h1',
-                triggerHook: 1,
-                reverse: false,
-            })
-                .setClassToggle('#intro','fade-in')
-                .addTo(controller);
-            let aboutUs = new ScrollMagic.Scene({
-                triggerElement: '#aboutUs',
-                triggerHook: 1,
-                reverse: false,
-            })
-                .setClassToggle('#aboutUs','fade-in')
-                .addTo(controller);
-            let menu = new ScrollMagic.Scene({
-                triggerElement: '#menuContent',
-                triggerHook: 1,
-                reverse: false,
-            })
-                .setClassToggle('#menu','fade-in')
-                .addTo(controller);
-        }else if ($(window).width() < 768) {
-            $('#intro').css({
-                opacity: '1',
-                transform: 'translateY(0)',
-            });
-            $('#aboutUs').css('opacity', '1');
-            $('#menu').css('opacity', '1');
-        }
+    $('.bgEvents').backstretch('assets/images/eventsBg.png');
 
 
 });

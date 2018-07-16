@@ -19,6 +19,9 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <!--Custom JS-->
     <script src="assets/javascripts/main.js"></script>
 </head>
 <body>
@@ -33,9 +36,9 @@
                 </div>
                 <div id="siteNav" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#Home">Home</a></li>
-                    <li><a href="#aboutUs">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
+                    <li class="active"><a href="index.html#Home">Home</a></li>
+                    <li><a href="index.html#aboutUs">About</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="https://www.grubhub.com/restaurant/halal5-10714-w-bellfort-st-houston/401673" target="blank">Order Online</a></li>
                     </ul>
@@ -61,6 +64,11 @@
             </div>
             </div>
         </div>
+        <div class="topBtn">
+           <center>
+            <a id="topBtn" href="#Home"><span class="glyphicon glyphicon-triangle-top text-center"></span><br>Top</a>
+           </center>
+        </div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -72,20 +80,38 @@
           <h2>Order Catering</h2>
         </div>
         <div class="modal-body">
+            <center><small> *One time truck roll-out fee: $500 each event</small><br></center>
           <form role="form">
             <div class="form-group">
-              <label for="name"><span class="glyphicon glyphicon-user"></span> Name:</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter name" required>
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="usrname" required>
             </div>
             <div class="form-group">
-              <label for="email"><span class="glyphicon glyphicon-envelope"></span> Email:</label>
-              <input type="text" class="form-control" id="email" placeholder="Enter email" required>
+              <label for="email">Email:</label>
+              <input type="text" class="form-control" id="email" required>
             </div>
             <div class="form-group">
-              <label for="tel"><span class="glyphicons glyphicons-earphone"></span> Tel:</label>
-              <input type="tel" class="form-control" id="tel" placeholder="Enter Contact #" required>
+              <label for="telInput">Telephone:</label>
+              <input type="tel" class="form-control" id="telInput" required>
             </div>
-            <button type="submit" class="cateringBtn"><span class="glyphicon glyphicon-send"></span> Login</button>
+            <div class="form-group">
+              <label for="eventLoc">Event Location:</label>
+              <input type="text" class="form-control" id="eventLoc">
+            </div>
+            <div class="form-group">
+              <label for="eventDate">Event Date & Time:</label>
+              <input type="datetime-local" class="form-control" id="eventDate">
+            </div>
+            <div class="form-group">
+              <label for="numGuests">Number of Attendees</label>
+              <input type="number" class="form-control" id="numGuests" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Event Details:</label>
+              <br>
+              <textarea name="message" width="100%"></textarea>
+            </div>
+            <button type="submit" class="cateringBtn"><span class="glyphicon glyphicon-send"></span> Send Order</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -240,7 +266,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
-                <br><h3><a class="text-center cateringBtn">Cater With Us!</a><br><br><small>Make your event special with our catering!</h3>
+                <br><h3><a class="text-center cateringBtn">Cater With Us!</a><br><br>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
             </div>
@@ -251,12 +277,13 @@
     </div>
     <!--Loyalty-->
     <div id="loyalty" class="container-fluid">
-    <div  class="row">
+    <div class="row">
         <div class="col-sm-12 text-center">
             <h1>Join Our Loyalty Program<br><small>Get special offers when you sign up!</small></h1>
-            <form>
-                <input class="form-control" id="search" type="text" placeholder="Enter your email">
-                <button class="btn" id="submit" type="submit">Subscribe</button>
+            <h6 id="loyalMsg"></h6>
+            <form id="loyaltyForm">
+                <input class="form-control" id="loyalEmail" type="text" placeholder="Enter your email">
+                <button class="btn" id="joinBtn" type="submit">Join</button>
             </form>
         </div>
     </div>
@@ -268,18 +295,21 @@
         <div id="contactUs">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-                    <a href="index.html"><img id="footerLogo"src="assets/images/logo2.png"></a> 
+                    <a href="index.html"><img id="footerLogo"src="assets/images/logo2.png"></a><br>
+                </div>
+                <div class="col-md-5 col-sm-12">
                     <h4>
                         10714 West Bellfort St.<br>
                         Houston, Texas 77099 
                     </h4>
-                </div>
-                <div class="col-md-5 col-sm-12">
-                    <h4><a href="#contactUs"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></h4>
-                    <h4><a href="#franchise"><span class="glyphicon glyphicon-globe"></span> Franchise</a></h4>
+                    <h4><a href="mailto:info@halal5.com?subject=Question&body=Hi!"><span class="glyphicon glyphicon-envelope"></span> info@halal5.com</a></h4>
+                    <h4><a href="#franchise"><span class="glyphicon glyphicon-globe"></span> Franchise Info.</a></h4>
+                    Check out another Halal5 location:
+                    <br>
+                    <span class="locations" id="h5Gessner">Halal5 Gessner</span> | <span class="locations" id="h5Herwin">Halal5 Harwen</span>
                 </div>
                 <div class="col-md-3 col-sm-12 siteCredits">
-                    <center><h5>Site Engineered by: <br><br>
+                    <center><h5><small style="color:#444; font-weight: bold;">Site Engineered by</small><br><br>
                         <a href="https://www.osmannaseer.com"><img id="siteCredits" class="img-responsive"src="assets/images/siteCredit.png"></a></center>
                 </div>
             </div>

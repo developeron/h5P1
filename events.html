@@ -19,41 +19,150 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!--Events-->
-    <div id="events" class="container-fluid">
-        <div class="row eventsHeader">
-            <div class="col-md-12 text-center" style="background:black;">
-                <h1>Events</h1>
-                <video autoplay muted loop id="eventVideo">
-                    <source src="assets/images/events/events.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div id="pastEvents" class="col-lg-6 col-md-6 col-sm-12 text-center" style="background:black;">
-                <h3 class="eventsHeader">Past Events</h3>
-                <h3 id="2018">2018</h3>
-                <hr>
-                <div>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F413202122504946%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F409538989537926%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F401622840329541%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F396657997492692%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                </div>
-            </div>
-            <div id="upcomingEvents"class="col-lg-6 col-md-6 col-sm-12 text-center"style="background:black;">
-                <h3 class="eventsHeader">Upcoming Events</h3>
-                <div class="eventsMonth">
-                    <h3 id="july">July</h3>
-                    <hr>
-                    <div>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F413202122504946%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F409538989537926%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F401622840329541%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F396657997492692%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Halal5 | Fresh.Fast.Healthy</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <!--GoogleFonts-->
+            <link href="https://fonts.googleapis.com/css?family=Stoke|Poiret+One|Montserrat|Marvel|Work+Sans:900|Six Caps|Michroma" rel="stylesheet">
+            <!--IconAPI-->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+            <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+            <!-- Custom CSS -->
+            <link rel="stylesheet" href="assets/css/style.css">
+            <!--Firebase-->
+            <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+            <!--Custom JS-->
+            <script src="assets/javascripts/events.js"></script>
+        </head>
+        <body>
+        <!--Header-->
+            <div class="bgEvents">
+                    <div class="container-fluid" id="Home">
+                            <nav id="nav" class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="200">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNav">
+                                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                                    </button>
+                                    <!--<a class="navbar-brand" href="index.html"><img class="img-responsive" src="assets/images/logo.png"></a>-->
+                                </div>
+                                <div id="siteNav" class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="index.html#Home">Home</a></li>
+                                    <li><a href="index.html#aboutUs">About</a></li>
+                                    <li><a href="index.html#menu">Menu</a></li>
+                                    <li><a href="events.html">Events</a></li>
+                                    <li><a href="https://www.grubhub.com/restaurant/halal5-10714-w-bellfort-st-houston/401673" target="blank">Order Online</a></li>
+                                    </ul>
+                                    <h4 id="telCollapsed"><span class="glyphicon glyphicon-phone-alt"></span> 1.855.5.HALAL5</h4>
+                                </div>
+                                <h4 id="tel"><span class="glyphicon glyphicon-phone-alt"></span> 1.855.5.HALAL5</h4>
+                            </nav>
+                        </div>
+                        <div class="eventsIntro" class="container-fluid">
+                            <div class="row">
+                                <img class="img-responsive"src="assets/images/logo.png">
+                            </div>
+                        </div>
+            <!--Events-->
+            <div id="eventStart" class="container-fluid">
+                <div class="row">
+                    <div class="row eventsHeader">
+                        <div id="eventsHeader" class="col-md-12 text-center">
+                            <h1 class="text-left">Events</h1>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div id="events" class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <video autoplay controls loop id="eventVideo">
+                                <source src="assets/images/events/events.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div id="upcomingEvents"class="col-lg-6 col-md-6 col-sm-12 text-center">
+                            <h3 class="eventsHeader">Upcoming Events</h3>
+                            <div class="eventsMonth text-left">
+                                    <h3 id="july">- July -</h3>
+                                    Comming Soon! Please Check back later!
+                                    <hr>
+                                    <h3 id="august">- August -</h3>
+                                    Comming Soon! Please Check back later!
+                                    <hr>
+                                    <h3 id="September">- September -</h3>
+                                    Comming Soon! Please Check back later!
+                                </div>
+                        </div>
+                    </div>
+                    <div id="pastEvents" class="col-lg-12 col-md-12 col-sm-12 text-center" style="background:black;">
+                        <h3 class="eventsHeader">Past Events</h3>
+                        <h3 id="2018">2018</h3>
+                        <div>
+                            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F413202122504946%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F409538989537926%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F401622840329541%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F10714westbellfort%2Fvideos%2F396657997492692%2F&width=300&show_text=false&height=168&appId"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                        </div>
+                        <hr>
+                        <h3 id="2017">2017</h3>
+
+                    </div>
+                </div>
+            </div>
+            <!--Loyalty-->
+            <div id="loyalty" class="container-fluid" style="background:black">
+                <div  class="row">
+                    <div class="col-sm-12 text-center">
+                        <h1>Join Our Loyalty Program<br><small>Get special offers when you sign up!</small></h1>
+                        <h6 id="loyalMsg"></h6>
+                        <form id="loyaltyForm">
+                            <input class="form-control" id="loyalEmail" type="text" placeholder="Enter your email">
+                            <button class="btn" id="joinBtn" type="submit">Join</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Footer-->
+<!--ContactUs-->
+<footer class="container-fluid">
+        <div id="contactUs">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <a href="index.html"><img id="footerLogo"src="assets/images/logo2.png"></a><br>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <h4>
+                        10714 West Bellfort St.<br>
+                        Houston, Texas 77099 
+                    </h4>
+                    <h4><a href="mailto:info@halal5.com?subject=Question&body=Hi!"><span class="glyphicon glyphicon-envelope"></span> info@halal5.com</a></h4>
+                    <h4><a href="#franchise"><span class="glyphicon glyphicon-globe"></span> Franchise Info.</a></h4>
+                    Check out another Halal5 location:
+                    <br>
+                    <span class="locations" id="h5Gessner">Halal5 Gessner</span> | <span class="locations" id="h5Herwin">Halal5 Harwen</span>
+                </div>
+                <div class="col-md-3 col-sm-12 siteCredits">
+                    <center><h5><small style="color:#444; font-weight: bold;">Site Engineered by</small><br><br>
+                        <a href="https://www.osmannaseer.com"><img id="siteCredits" class="img-responsive"src="assets/images/siteCredit.png"></a></center>
+                </div>
+            </div>
+            </div>
         </div>
+    </footer>
     </div>
+
 </body>
 </html>
 

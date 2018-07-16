@@ -20,9 +20,33 @@ body, html {
     width:auto;
     opacity: 1; 
 }
+.bgEvents{
+    background-color:black;
+    height: 100%;
+    width:auto;
+    opacity: 1; 
+}
 #bgOverlay{
     
     height: 100%;
+}
+.topBtn {
+    position: -webkit-sticky;
+    position: sticky;
+    top:80%;
+    float: right;
+    color: #efcc31;
+    z-index: 9999;
+    background: linear-gradient(to bottom, transparent, #ac1d07);
+}
+#topBtn {
+
+    color: #efcc31;
+    font-size:16px;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    border:0;
+    text-decoration: blink;
 }
 #siteNav {
     /* background: transparent; */
@@ -40,11 +64,6 @@ body, html {
     box-shadow: 2px 0px 10px #444;
     padding: 1rem;
     font-weight: 600;    
-}
-#bgOverlay{
-    height: 100%;
-    background-color: transparent;
-    
 }
 .intro{
     margin-top:10px;
@@ -124,6 +143,18 @@ body, html {
     color: #ac1d07;
     border:0px;
 }
+.modal-body input{
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 2px 0px 10px #efcc31;
+    color: #ac1d07;
+    border:0px;
+    border-radius:0;
+}
+textarea {
+    width: 100%;
+    height: 170px;
+}
 .modal-header, .close {
     background-color: #ac1d07;
     color:#efcc31 !important;
@@ -199,6 +230,7 @@ a>i {
     left: 10px;
     text-shadow: 2px 0px 10px #ac1d07;
 }
+
 #aboutUsHeader {
     color:#ac1d07;
     font-size: 48px;
@@ -229,9 +261,10 @@ a>i {
 #fbFeed {
     width:300px;
 }
-#loyalty div {
+#loyalty>div {
     background: linear-gradient(to bottom, transparent, black);
 }
+
 #loyalty h1 {
     font-family:'Poriet One',serif;
     color:#efcc31;
@@ -269,7 +302,7 @@ a>i {
     color:black;
 }
 #menu {
-    background: transparent;
+    background: linear-gradient(to bottom, transparent, black);
     color:#efcc31;
     font-size: 48px;
     font-family: 'Montserrat', sans-serif;
@@ -356,37 +389,65 @@ a>i {
     background: transparent;
     color: #ac1d07;
 }
-.eventStart {
-    position: relative;
-    top:0;
-    left:0;
-    width:100%;
-    height: 20px;
-    background: linear-gradient(to bottom, #efcc319d,rgba(0, 0, 0, 0.815));
-    box-shadow: 2px 0px 10px #efcc3125;
-}
-.jumbotron {
-    background:transparent;
-    margin:0;
-}
-#events>div{
-    height: auto;
-    background: rgba(0, 0, 0, 0);
-}
+.eventsIntro>div>img {
+    margin: 50px auto;
 
-#pastEvents {
-    height: 100%;;
 }
-.eventsHeader {
+#events div{
+    height: auto;
     background: black;
     color:#efcc31;
-    height: 100%;;
+}
+
+#eventsHeader>h1 {
+    background: transparent;
+    color: #efcc31;
+    height: 100%;
+    font-weight: 900;
+    font-size: 96px;
     font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 0px 10px black;
+
+}
+#eventsHeader {
+    background: linear-gradient(to bottom, transparent, black);
+    color:#efcc31;
+    height: 100%;
+    font-weight: 900;
+    font-size: 96px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 0px 10px black;
+
+}
+.eventsHeader>div {
+    background: linear-gradient(to bottom, transparent, black);
+}
+h3.eventsHeader {
+    background: linear-gradient(to bottom, transparent, black);
+    color:#ac1d07;
+    height: 100%;
+    font-weight: 900;
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+}
+.eventsMonth h3 {
+    color:#efcc31;
+    text-align: center;
 }
 video {
     opacity: 1;
-    width:100%;
+    width:90%;
     height: auto;
+    box-shadow: 2px 0px 10px #efcc31;
+    margin-top:15px;
+}
+#pastEvents {
+    height: 100%;;
+}
+#upcomingEvents {
+    height: 100%;
+    overflow-x: scroll;
+    background: black;
 }
 #fbFeed{
     position: relative;
@@ -437,6 +498,9 @@ footer {
 .siteCredits>h5, .siteCredits>h5>a {
     position: absolute;
     bottom:0;
+}
+#successMsg {
+    color: white;
 }
 .navbar-default .navbar-nav>li>a{
     margin-right:10px;
@@ -553,6 +617,18 @@ a.navbar-brand:visited {
         font-family: 'Montserrat', sans-serif;
         letter-spacing: 1px;
     }
+    #aboutUs>div>h1 {
+        font-family: 'Work Sans', sans-serif;
+        background: transparent;
+        font-size: 72px;
+        color: #efcc31;
+        margin-bottom: 0;
+        width: 50%;
+        position: relative;
+        bottom: -36px;
+        left: 10px;
+        text-shadow: 2px 0px 10px #ac1d07;
+    }
     #aboutUs.fade-in>div>h1 {
         font-family: 'Work Sans', sans-serif;
         background: transparent;
@@ -577,7 +653,7 @@ a.navbar-brand:visited {
         display: none;
     }
     #sloganBanner{
-        height: 15vh;
+        height: 0vh;
     }
     #slogan {
         font-size: 20px;
@@ -592,6 +668,13 @@ a.navbar-brand:visited {
     #intro>img {
         margin: 0 auto;
         transition: all 1s ease-out;
+    }
+    #loyalty input {
+        border-radius: 0;
+        border-color: #efcc31;
+        max-width: 85%;
+        margin: 0 auto;
+        background: #00000084;
     }
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
         border-color: transparent;
