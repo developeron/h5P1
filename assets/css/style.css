@@ -11,6 +11,15 @@
 ::-webkit-scrollbar-thumb {
     background: #efcc31;
 }
+::-moz-selection { /* Code for Firefox */
+    color: #ac1d07;
+    background: #efcc31;
+}
+
+::selection {
+    color: #ac1d07;
+    background: #efcc31;
+}
 body, html {
     height: 100%;
     overflow-x: hidden;
@@ -177,9 +186,15 @@ textarea {
     width:50%;
     height: auto;
 }
+.footerLogo a:hover {
+    width:50%;
+    height: auto;
+    background: transparent;
+}
 #siteCredits {
+    margin: 0 5px;
     background-color:transparent;
-    width:25px;
+    width:15px;
     height: auto;
     box-shadow: 2px 0px 10px #0000;
     transition: all 1s ease-out;
@@ -187,7 +202,7 @@ textarea {
 #siteCredits:hover {
     background-color:transparent;
     box-shadow: 2px 0px 10px #efcc31;
-    width:30px;
+    width:15px;
     height: auto;
 }
 a {
@@ -207,6 +222,7 @@ a>i {
     height: 5px;
     background: rgba(255, 255, 255, 0.267);
 }
+
 #aboutUs {
     background: transparent;
     opacity: 0;
@@ -326,6 +342,7 @@ a>i {
 #menuHeader {
     background: #ac1d07;
     box-shadow: 2px 0px 10px #00000081;
+    font-size:96px;
 }
 #menuContent {
     background: #efcc31;
@@ -364,6 +381,17 @@ a>i {
     /*background-image: url('../images/entrees/chkQuesadilla.jpg');
     background-repeat:no-repeat;
     background-size: cover;*/
+}
+.thumbnail {
+    background-color: transparent;
+    border-color:transparent;
+    box-shadow: 2px 0px 10px #ac1d078e;
+
+}
+.category {
+    text-align: left;
+    background:#ac1d07;
+    color:#efcc31;
 }
 .sideItems {
 
@@ -484,26 +512,31 @@ footer {
     width: 100px;
     height: auto;
 }
-#contactUs a {
+#contactInfo a {
     color: #efcc31;
 }
-#contactUs a:hover {
+#contactInfo a:hover {
     color: #ac1d07;
     background:#efcc31;
     text-decoration: blink;
 }
-.siteCredits{
-    position: relative;
-}
-.siteCredits>h5, .siteCredits>h5>a {
-    position: absolute;
-    bottom:0;
+#contactInfo {
+    padding-top: 10px;
 }
 #successMsg {
     color: white;
 }
-.locations {
+#locations {
     cursor: pointer;
+}
+#locations>option:focus {
+    cursor: pointer;
+    color: #efcc31;
+    background-color:#ac1d07;
+}
+#locations, option {
+    color: #efcc31;
+    background-color:#ac1d07;
 }
 .navbar-default .navbar-nav>li>a{
     margin-right:10px;
@@ -671,6 +704,11 @@ a.navbar-brand:visited {
     #intro>img {
         margin: 0 auto;
         transition: all 1s ease-out;
+    }
+    #menuHeader {
+        background: #ac1d07;
+        box-shadow: 2px 0px 10px #00000081;
+        font-size:60px;
     }
     #loyalty input {
         border-radius: 0;
