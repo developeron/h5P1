@@ -21,13 +21,13 @@ $(document).ready(function(){
 
             // if successfull display the user email has been add to our loyalty program.
             if (getEmailAdd == "" || getEmailAdd == undefined || getEmailAdd == " ") {
-                $('#loyalMsg').text('Please enter a valid email address!');
+                $('#successMsg').text('Please enter a valid email address!');
             } else {
                 let newSignUp = new Members (getEmailAdd);
                 //Update DB with new member email address
                 db.ref('/users/').push(newSignUp);
                 //Display success message
-                $('#loyalMsg').text(`Thank You! Your email address: ${getEmailAdd} has been added to our loyalty program`)
+                $('#successMsg').text(`Thank You! Your email address: ${getEmailAdd} has been added to our loyalty program`)
             }
         //empty the input
         $('#loyalEmail').val('');
@@ -36,6 +36,11 @@ $(document).ready(function(){
     //Invoke modal
     $(".cateringBtn").click(function(){
         $("#myModal").modal();
+    });
+
+    //Invoke franModal
+    $("#franInfo").click(function(){
+        $("#franModal").modal();
     });
 //CONTACT US
 // on Click event => update the location's relative address | hours 
@@ -75,7 +80,7 @@ $(document).on('click', '#locations', function(event){
     //scrollMagic.js
 
     //$(window).on("resize", function(e) {
-        if ($(window).width() > 768) {
+        if ($(window).width() >= 768) {
             let controller = new ScrollMagic.Controller();
     
             let logo = new ScrollMagic.Scene({

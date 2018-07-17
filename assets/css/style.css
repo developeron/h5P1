@@ -145,6 +145,26 @@ body, html {
     cursor: pointer;
     box-shadow: 2px 0px 10px #efcc31;
 }
+.franBtn{
+    border-radius: 0;
+    border:0;
+    background-color: #ac1d07;
+    color: #efcc31;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    padding: 7px;
+    box-shadow: 2px 0px 10px #ac1d07;
+}
+.franBtn:hover{
+    border-radius: 0;
+    border:0;
+    background-color: #efcc31;
+    text-decoration: none;
+    color: #ac1d07;
+    transition: all .5s ease-out;
+    cursor: pointer;
+    box-shadow: 2px 0px 10px #efcc31;
+}
 .modal-content{
     font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
@@ -342,7 +362,7 @@ a>i {
 #menuHeader {
     background: #ac1d07;
     box-shadow: 2px 0px 10px #00000081;
-    font-size:96px;
+    font-size: 72px;
 }
 #menuContent {
     background: #efcc31;
@@ -450,6 +470,14 @@ a>i {
 .eventsHeader>div {
     background: linear-gradient(to bottom, transparent, black);
 }
+.eventsP{
+    color:#efcc31;
+    background: black;
+    font-size: 20px;
+    padding-bottom: 0;
+    margin: 0 auto;
+    font-family: 'Marvel', sans-serif;
+}
 h3.eventsHeader {
     background: linear-gradient(to bottom, transparent, black);
     color:#ac1d07;
@@ -525,6 +553,7 @@ footer {
 }
 #successMsg {
     color: white;
+    font-weight: bold;
 }
 #locations {
     cursor: pointer;
