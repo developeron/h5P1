@@ -525,6 +525,11 @@ video {
     padding:5px;
     margin: 0 auto;
 }
+#fbLogo {
+    font-size:20px;
+    border: 0px solid #efcc31;
+    padding:20px;
+}
 footer {
     background:#ac1d07;
     color:#efcc31;
