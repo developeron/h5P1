@@ -42,6 +42,35 @@ $(document).ready(function(){
     $("#franInfo").click(function(){
         $("#franModal").modal();
     });
+
+//Modal Forms Data Submission
+        let ctrObj = function(name, email, tel, loc, time, guests, message){
+            this.name = name;
+            this.email = email;
+            this.tel = tel;
+            this.loc = loc;
+            this.time = time;
+            this.guests = guests;
+            this.message = message;
+
+        };
+        $(document).on('click','#cateringSubmit', function(){
+            let msgBody = new ctrObj ($('#usrname').val().trim(),$('#email').val().trim(),$('#telInput').val().trim(),$('#eventLoc').val().trim(),$('#eventDate').val().trim(),$('#numGuests').val().trim(),$('#cateringMsg').val().trim());
+            db.ref('/orders/').push(msgBody);
+        });
+
+        let franObj = function(name, email, tel, message){
+            this.name = name;
+            this.email = email;
+            this.tel = tel;
+            this.message = message;
+
+        };
+        $(document).on('click','#franSubmit', function(){
+            let franMsgBody = new franObj ($('#franName').val().trim(),$('#franEmail').val().trim(),$('#franTelInput').val().trim(),$('#franMessage').val().trim());
+            db.ref('/franchiseInq/').push(franMsgBody);
+        });
+
 //CONTACT US
 // on Click event => update the location's relative address | hours 
 
