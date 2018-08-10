@@ -18,11 +18,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <!--Custom JS-->
+    <script src="assets/javascripts/email.js"></script>
     <script src="assets/javascripts/main.js"></script>
 </head>
 <body>
@@ -81,36 +83,37 @@
           <h2>Order Catering</h2>
         </div>
         <div class="modal-body">
+            <div id="cateringSuccessMsg"></div>
             <center><small> *One time truck roll-out fee: $500 each event</small><br></center>
-          <form role="form">
+          <form role="form" id="contact-form">
             <div class="form-group">
               <label for="name">Name:</label>
-              <input type="text" class="form-control" id="usrname" required>
+              <input type="text" class="form-control" name="name" id="usrname" required>
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
-              <input type="text" class="form-control" id="email" required>
+              <input type="text" class="form-control" name="email" id="email" required>
             </div>
             <div class="form-group">
               <label for="telInput">Telephone:</label>
-              <input type="tel" class="form-control" id="telInput" required>
+              <input type="tel" class="form-control" name="tel" id="telInput" required>
             </div>
             <div class="form-group">
               <label for="eventLoc">Event Location:</label>
-              <input type="text" class="form-control" id="eventLoc">
+              <input type="text" class="form-control" name="location" id="eventLoc">
             </div>
             <div class="form-group">
               <label for="eventDate">Event Date & Time:</label>
-              <input type="datetime-local" class="form-control" id="eventDate">
+              <input type="datetime-local" class="form-control" name="eventTime" id="eventDate">
             </div>
             <div class="form-group">
               <label for="numGuests">Number of Attendees</label>
-              <input type="number" class="form-control" id="numGuests" required>
+              <input type="number" class="form-control" name="guests" id="numGuests" required>
             </div>
             <div class="form-group">
-              <label for="message">Event Details:</label>
+              <label for="text">Event Details:</label>
               <br>
-              <textarea name="message" width="100%" id="cateringMsg"></textarea>
+              <textarea width="100%" name="text" id="cateringMsg"></textarea>
             </div>
             <button type="submit" class="cateringBtn" id="cateringSubmit"><span class="glyphicon glyphicon-send"></span> Send Order</button>
           </form>
@@ -377,36 +380,42 @@
                     <div class="form-group">
                         <label for="locations">Choose location:</label>
                         <select id="locations">
-                            <option>Halal5 W. Bellfort</option>
-                            <option>Halal5 Gessner</option>
+                            <option>Halal5 W. Bellfort Truck</option>
+                            <option>Halal5 Harwin Truck</option>
+                            <option>Halal5 Restaurant</option>
                         </select>
                     </div>
                 </div>
                 <div id="contactInfo" class="col-md-5 col-sm-12">
+                    <h2 id="contactHeader">Come See Us.</h2>
                     <h4>
                         10714 West Bellfort St.<br>
                         Houston, Texas 77099<br>
                     </h4>
-                    <h4><span class="glyphicon glyphicon-phone"></span> 1.855.542.5255</h4>
+                    <h4><span class="glyphicon glyphicon-phone"></span> 832.617.7817</h4>
                     <h4><a href="mailto:info@halal5.com?subject=Question&body=Hi!"><span class="glyphicon glyphicon-envelope"></span> info@halal5.com</a></h4>
                     <h4><a href="#franchise" id="franInfo"><span class="glyphicon glyphicon-globe"></span> Franchise Info.</a></h4>
-                    <h4><span class="glyphicon glyphicon-time"></span> Hours<br><h5>Sunday - Thursday: 11AM - 11PM | Friday & Saturday: 11AM - 12AM </h5></h4>
+                    <h4><span class="glyphicon glyphicon-time"></span> Hours<br><h5>Sunday - Saturday: 11AM - 12AM</h5></h4>
 
                 </div>
                 <div class="col-md-3 col-sm-12">
-                    <h1 id="fbLogo" class="text-center"><a href="https://www.facebook.com/10714westbellfort/"><i class="fab fa-facebook-f"></i></a></h1>
+                    <h2 id="contactHeader">Follow Us!</h2>
+                    <a id="fbLogo" href="https://www.facebook.com/10714westbellfort/"><i class="fab fa-facebook-f"></i></a>
                 </div>
                 </div>
-            <div class="row">
-                <div class="col-md-2 col-sm-2">
-                    <h5><small style="color:black; font-weight: bold;">Engineered by</small>
+            <div class="row copyright">
+                <div class="col-md-4 col-sm-4">
+                    <h6><small style="color:black; font-weight: bold;">Engineered by</small>
                     <a href="https://www.osmannaseer.com"><img id="siteCredits" class="img-responsive"src="assets/images/siteCredit.png" alt="Site Credits | Osman Naseer.com - Web Developer"></a>
-                    </h5>
+                    </h6>
                 </div>
-            </div>
+                <div class="col-md-4 col-sm-4 text-center copyrightText">
+                    Copyright © Halal5 - All Rights Reserved 2018 | Privacy Terms
+                </div>
+                <div class="col-md-4 col-sm-4">
+                </div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

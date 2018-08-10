@@ -232,7 +232,12 @@ a {
 a>i {
     color:#fded00;
     background-color: transparent;
-    font-size:2.5em;
+    font-size:3.5em;
+}
+a>i:hover {
+    color:#ac1d07;
+    background-color: transparent;
+    font-size:3.5em;
 }
 .hr {
     height: 5px;
@@ -437,6 +442,15 @@ a>i {
     background: transparent;
     color: #ac1d07;
 }
+.menuEditBtn {
+    border: none;
+    background: transparent;
+    
+}
+.menuEditBtn:hover{
+    color:#efcc31;
+    text-shadow: 2px 0px 10px black;
+}
 .eventsIntro>div>img {
     margin: 50px auto;
 
@@ -446,7 +460,11 @@ a>i {
     background: black;
     color:#efcc31;
 }
-
+#menu input {
+    width:50px;
+    background:transparent;
+    color:#ac1d07;
+}
 #eventsHeader>h1 {
     background: transparent;
     color: #efcc31;
@@ -525,15 +543,42 @@ video {
     padding:5px;
     margin: 0 auto;
 }
-#fbLogo {
-    font-size:20px;
-    border: 0px solid #efcc31;
-    padding:20px;
+a#fbLogo {
+    display: block;
+    color: rgba(255,255,255,0.3);
+    font-size: 15px;
+    width: 100px;
+    height: 100px;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+a#fbLogo:hover {
+    background-color: #efcc31;
+    color:#ac1d07;
+}
+
+.fab{
+    display: inline-block;
+    padding:25px;
 }
 footer {
     background:#ac1d07;
     color:#efcc31;
     font-family: 'Montserrat', sans-serif;
+}
+.copyrightText{
+    background-color: transparent;
+    margin-top: 40px;
+    font-weight: bold;
+    color: black;
+}
+.copyright{
+    background-color: rgba(0,0,0,0.2);
+    margin-top:5px;
 }
 #contactUs p {
     font-size: 20px;

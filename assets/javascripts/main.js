@@ -55,6 +55,7 @@ $(document).ready(function(){
 
         };
         $(document).on('click','#cateringSubmit', function(){
+            $('#cateringSuccessMessage').append(`<h6> Your order has been sent! We will contact you within 24 hours</h6>`);
             let msgBody = new ctrObj ($('#usrname').val().trim(),$('#email').val().trim(),$('#telInput').val().trim(),$('#eventLoc').val().trim(),$('#eventDate').val().trim(),$('#numGuests').val().trim(),$('#cateringMsg').val().trim());
             db.ref('/orders/').push(msgBody);
         });
@@ -78,18 +79,18 @@ $(document).ready(function(){
 $(document).on('click', '#locations', function(event){
     event.preventDefault;
     console.log($(this).val());
-    if($(this).val() === 'Halal5 W. Bellfort'){
+    if($(this).val() === 'Halal5 W. Bellfort Truck'){
         $('#contactInfo').html(`
         <h4>
         10714 West Bellfort St.<br>
         Houston, Texas 77099<br>
         </h4>
-        <h4><span class="glyphicon glyphicon-phone"></span> 1.855.542.5255</h4>
+        <h4><span class="glyphicon glyphicon-phone"></span> 832.617.7817</h4>
         <h4><a href="mailto:info@halal5.com?subject=Question&body=Hi!"><span class="glyphicon glyphicon-envelope"></span> info@halal5.com</a></h4>
         <h4><a href="#franchise"><span class="glyphicon glyphicon-globe"></span> Franchise Info.</a></h4>
-        <h4><span class="glyphicon glyphicon-time"></span> Hours<br><h5>Sunday - Thursday: 11AM - 11PM | Friday & Saturday: 11AM - 12AM </h5></h4>
+        <h4><span class="glyphicon glyphicon-time"></span> Hours<br><h5>Sunday - Saturday: 11AM - 12AM</h5></h4>
         `);
-    }else if ($(this).val() === 'Halal5 Gessner') {
+    }else if ($(this).val() === 'Halal5 Restaurant') {
             $('#contactInfo').html(`
             <h4>
             3730-B S Gessner Rd<br>
@@ -98,9 +99,20 @@ $(document).on('click', '#locations', function(event){
             <h4><span class="glyphicon glyphicon-phone"></span> 281.974.3918</h4>
             <h4><a href="mailto:info@halal5.com?subject=Question&body=Hi!"><span class="glyphicon glyphicon-envelope"></span> info@halal5.com</a></h4>
             <h4><a href="#franchise"><span class="glyphicon glyphicon-globe"></span> Franchise Info.</a></h4>
-            <h4><span class="glyphicon glyphicon-time"></span> Hours<br><h5>Sunday - Saturday: 11AM - 11PM</h5></h4>
+            <h4><span class="glyphicon glyphicon-time"></span> Hours<br><h5>Monday - Saturday: 11AM - 10PM | Sunday: Closed</h5></h4>
         `);
-    };
+    } else if ($(this).val() === 'Halal5 Harwin Truck'){
+        $('#contactInfo').html(`
+        <h4>
+        6820 Harwin Dr.<br>
+        Houston, Texas 77063<br>
+        </h4>
+        <h4><span class="glyphicon glyphicon-phone"></span> 713.998.0837</h4>
+        <h4><a href="mailto:info@halal5.com?subject=Question&body=Hi!"><span class="glyphicon glyphicon-envelope"></span> info@halal5.com</a></h4>
+        <h4><a href="#franchise"><span class="glyphicon glyphicon-globe"></span> Franchise Info.</a></h4>
+        <h4><span class="glyphicon glyphicon-time"></span> Hours<br><h5>Sunday - Saturday: 11AM - 12AM</h5></h4>
+        `);
+    }
 });
 
     //backstretch.js
