@@ -50,6 +50,7 @@ $(document).ready(function(){
         console.log($(this).val());
         if($(this).val() === 'Halal5 W. Bellfort Truck'){
             $('#contactInfo').html(`
+            <h2 id="contactHeader">Come See Us</h2>
             <h4>
             10714 West Bellfort St.<br>
             Houston, Texas 77099<br>
@@ -61,6 +62,7 @@ $(document).ready(function(){
             `);
         }else if ($(this).val() === 'Halal5 Restaurant') {
                 $('#contactInfo').html(`
+                <h2 id="contactHeader">Come See Us</h2>
                 <h4>
                 3730-B S Gessner Rd<br>
                 Houston, Texas 77063<br>
@@ -72,6 +74,7 @@ $(document).ready(function(){
             `);
         } else if ($(this).val() === 'Halal5 Harwin Truck'){
             $('#contactInfo').html(`
+            <h2 id="contactHeader">Come See Us</h2>
             <h4>
             6820 Harwin Dr.<br>
             Houston, Texas 77063<br>

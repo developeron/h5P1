@@ -560,7 +560,17 @@ a#fbLogo:hover {
     background-color: #efcc31;
     color:#ac1d07;
 }
-
+a#viewMore {
+    color:#efcc31;
+    text-decoration: none;
+    font-weight: bold;
+}
+a#viewMore:hover {
+    color:#ac1d07;
+    text-decoration: none;
+    background:#efcc31;
+    font-weight: bold;
+}
 .fab{
     display: inline-block;
     padding:25px;
