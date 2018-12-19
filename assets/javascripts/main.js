@@ -1,12 +1,12 @@
 $(document).ready(function(){
     // Initialize Firebase
     let config = {
-        apiKey: "AIzaSyD0_uGZFdDJuOei1DOvNSb7yscti_EWZsk",
-        authDomain: "halal5-web-devel-1531335599129.firebaseapp.com",
-        databaseURL: "https://halal5-web-devel-1531335599129.firebaseio.com",
-        projectId: "halal5-web-devel-1531335599129",
-        storageBucket: "halal5-web-devel-1531335599129.appspot.com",
-        messagingSenderId: "923111712811"
+        apiKey: "HIDDEN",
+        authDomain: "HIDDEN",
+        databaseURL: "HIDDEN",
+        projectId: "HIDDEN",
+        storageBucket: "HIDDEN",
+        messagingSenderId: "HIDDEN"
     };
     firebase.initializeApp(config);
     let db = firebase.database();
@@ -149,13 +149,8 @@ $(document).on('click', '#locations', function(event){
                 .setClassToggle('#menu','fade-in')
                 .addTo(controller);
         }else if ($(window).width() < 768) {
-            $('#intro').css({
-                opacity: '1',
-                transform: 'translateY(0)',
-            });
+            $('#intro').css('opacity','1');
             $('#aboutUs').css('opacity', '1');
             $('#menu').css('opacity', '1');
         }
-
-
 });
